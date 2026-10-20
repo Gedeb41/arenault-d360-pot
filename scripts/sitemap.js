@@ -206,8 +206,6 @@ try {
         }).then(() => {
             console.log('Interactions WebSDK initialized in WebRealTime dataspace');
 
-            SalesforceInteractions.Personalization.Config.initialize({});
-
             const config = {
                 global: {
                     contentZones: ["div#hero-image"]
