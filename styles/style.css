@@ -124,8 +124,8 @@ main {
 }
 /* end header */
 
-/* login form */
-#loginform {
+/* login & register forms */
+#loginform, #registerform {
   background-color: rgb(7, 57, 107);
   color: white;
   width: 250px;
@@ -135,7 +135,7 @@ main {
   position: fixed;
   z-index: 1;
 }
-#authenticationForm {
+#authenticationForm, #registerForm {
   display: grid;
 }
 .close {
