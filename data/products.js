@@ -127,7 +127,10 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 79.0,
   "description": "Reach for the stars of comfort and efficiency with our Smart Thermostat",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/thermostat-white.svg",
+  "images": {
+   "White": "images/accessories/thermostat-white.svg"
+  }
  },
  {
   "id": "11",
@@ -139,7 +142,10 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 99.0,
   "description": "Manage your day-to-day with our Smart Home Display.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/display-white.svg",
+  "images": {
+   "White": "images/accessories/display-white.svg"
+  }
  },
  {
   "id": "12",
@@ -151,7 +157,10 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 159.0,
   "description": "Elevate Your Wi-Fi Coverage, perfect for Work-From-Home Professionals!",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/wifi-white.svg",
+  "images": {
+   "White": "images/accessories/wifi-white.svg"
+  }
  },
  {
   "id": "13",
@@ -163,7 +172,10 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 159.0,
   "description": "The latest Accessories from Simpson, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/vr-pink.svg",
+  "images": {
+   "Pink": "images/accessories/vr-pink.svg"
+  }
  },
  {
   "id": "14",
@@ -255,7 +267,10 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 199.0,
   "description": "The latest Accessories from NovaTech, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/dock-pink.svg",
+  "images": {
+   "Pink": "images/accessories/dock-pink.svg"
+  }
  },
  {
   "id": "21",
@@ -267,7 +282,10 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 99.0,
   "description": "The latest Accessories from ePhone, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/watch-yellow.svg",
+  "images": {
+   "Yellow": "images/accessories/watch-yellow.svg"
+  }
  },
  {
   "id": "22",
@@ -281,7 +299,12 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 169.0,
   "description": "The latest Accessories from NovaTech, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/speaker-purple.svg",
+  "images": {
+   "Purple": "images/accessories/speaker-purple.svg",
+   "Grey": "images/accessories/speaker-grey.svg",
+   "Blue": "images/accessories/speaker-blue.svg"
+  }
  },
  {
   "id": "23",
@@ -307,7 +330,12 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 179.0,
   "description": "The latest Accessories from NovaTech, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/powerbank-white.svg",
+  "images": {
+   "White": "images/accessories/powerbank-white.svg",
+   "Purple": "images/accessories/powerbank-purple.svg",
+   "Red": "images/accessories/powerbank-red.svg"
+  }
  },
  {
   "id": "25",
@@ -344,7 +372,10 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 149.0,
   "description": "The latest Accessories from Simpson, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/speaker-white.svg",
+  "images": {
+   "White": "images/accessories/speaker-white.svg"
+  }
  },
  {
   "id": "28",
@@ -358,7 +389,12 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 179.0,
   "description": "The latest Accessories from Simpson, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/dock-grey.svg",
+  "images": {
+   "Grey": "images/accessories/dock-grey.svg",
+   "Red": "images/accessories/dock-red.svg",
+   "Yellow": "images/accessories/dock-yellow.svg"
+  }
  },
  {
   "id": "29",
@@ -396,7 +432,11 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 149.0,
   "description": "The latest Accessories from ePhone, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/dock-white.svg",
+  "images": {
+   "White": "images/accessories/dock-white.svg",
+   "Black": "images/accessories/dock-black.svg"
+  }
  },
  {
   "id": "32",
@@ -422,7 +462,11 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 159.0,
   "description": "The latest Accessories from NovaTech, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/ring-blue.svg",
+  "images": {
+   "Blue": "images/accessories/ring-blue.svg",
+   "Black": "images/accessories/ring-black.svg"
+  }
  },
  {
   "id": "34",
@@ -474,7 +518,11 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 119.0,
   "description": "The latest Accessories from Simpson, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/ring-grey.svg",
+  "images": {
+   "Grey": "images/accessories/ring-grey.svg",
+   "Black": "images/accessories/ring-black.svg"
+  }
  },
  {
   "id": "38",
@@ -486,7 +534,10 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 139.0,
   "description": "The latest Accessories from NovaTech, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/earbuds-red.svg",
+  "images": {
+   "Red": "images/accessories/earbuds-red.svg"
+  }
  },
  {
   "id": "39",
@@ -513,7 +564,11 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 149.0,
   "description": "The latest Accessories from Simpson, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/powerbank-green.svg",
+  "images": {
+   "Green": "images/accessories/powerbank-green.svg",
+   "Grey": "images/accessories/powerbank-grey.svg"
+  }
  },
  {
   "id": "41",
@@ -526,7 +581,11 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 199.0,
   "description": "The latest Accessories from Simpson, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/vr-white.svg",
+  "images": {
+   "White": "images/accessories/vr-white.svg",
+   "Blue": "images/accessories/vr-blue.svg"
+  }
  },
  {
   "id": "42",
@@ -554,7 +613,12 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 159.0,
   "description": "The latest Accessories from ePhone, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/earbuds-white.svg",
+  "images": {
+   "White": "images/accessories/earbuds-white.svg",
+   "Red": "images/accessories/earbuds-red.svg",
+   "Blue": "images/accessories/earbuds-blue.svg"
+  }
  },
  {
   "id": "44",
@@ -672,7 +736,11 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 209.0,
   "description": "The latest Accessories from Simpson, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/watch-grey.svg",
+  "images": {
+   "Grey": "images/accessories/watch-grey.svg",
+   "White": "images/accessories/watch-white.svg"
+  }
  },
  {
   "id": "53",
@@ -738,7 +806,12 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 149.0,
   "description": "The latest Accessories from ePhone, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/vr-pink.svg",
+  "images": {
+   "Pink": "images/accessories/vr-pink.svg",
+   "Purple": "images/accessories/vr-purple.svg",
+   "Blue": "images/accessories/vr-blue.svg"
+  }
  },
  {
   "id": "58",
@@ -762,7 +835,10 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 69.0,
   "description": "The latest Accessories from Simpson, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/earbuds-pink.svg",
+  "images": {
+   "Pink": "images/accessories/earbuds-pink.svg"
+  }
  },
  {
   "id": "60",
@@ -892,7 +968,12 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 189.0,
   "description": "The latest Accessories from NovaTech, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/watch-pink.svg",
+  "images": {
+   "Pink": "images/accessories/watch-pink.svg",
+   "Green": "images/accessories/watch-green.svg",
+   "Grey": "images/accessories/watch-grey.svg"
+  }
  },
  {
   "id": "70",
@@ -916,7 +997,10 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 199.0,
   "description": "The latest Accessories from NovaTech, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/vr-pink.svg",
+  "images": {
+   "Pink": "images/accessories/vr-pink.svg"
+  }
  },
  {
   "id": "72",
@@ -1018,7 +1102,11 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 139.0,
   "description": "The latest Accessories from NovaTech, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/watch-grey.svg",
+  "images": {
+   "Grey": "images/accessories/watch-grey.svg",
+   "White": "images/accessories/watch-white.svg"
+  }
  },
  {
   "id": "80",
@@ -1084,7 +1172,11 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 89.0,
   "description": "The latest Accessories from ePhone, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/ring-pink.svg",
+  "images": {
+   "Pink": "images/accessories/ring-pink.svg",
+   "Green": "images/accessories/ring-green.svg"
+  }
  },
  {
   "id": "85",
@@ -1109,7 +1201,10 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 69.0,
   "description": "The latest Accessories from Simpson, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/ring-pink.svg",
+  "images": {
+   "Pink": "images/accessories/ring-pink.svg"
+  }
  },
  {
   "id": "87",
@@ -1147,7 +1242,11 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 109.0,
   "description": "The latest Accessories from ePhone, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/speaker-yellow.svg",
+  "images": {
+   "Yellow": "images/accessories/speaker-yellow.svg",
+   "Blue": "images/accessories/speaker-blue.svg"
+  }
  },
  {
   "id": "90",
@@ -1159,7 +1258,10 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 169.0,
   "description": "The latest Accessories from ePhone, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/powerbank-red.svg",
+  "images": {
+   "Red": "images/accessories/powerbank-red.svg"
+  }
  },
  {
   "id": "91",
@@ -1224,7 +1326,10 @@ window.QUADSTAR_PRODUCTS = [
   ],
   "price": 209.0,
   "description": "The latest Accessories from ePhone, featuring top-notch technology and sleek design.",
-  "image": "images/accessory.svg"
+  "image": "images/accessories/watch-purple.svg",
+  "images": {
+   "Purple": "images/accessories/watch-purple.svg"
+  }
  },
  {
   "id": "96",

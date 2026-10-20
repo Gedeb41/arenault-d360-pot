@@ -159,6 +159,7 @@
 
     main.querySelectorAll("input[name=color]").forEach((r) => r.addEventListener("change", () => {
       document.getElementById("color-name").textContent = r.value;
+      if (p.images && p.images[r.value]) main.querySelector(".left-column img").src = p.images[r.value];
     }));
     main.querySelectorAll(".cable-choose button").forEach((b) => b.addEventListener("click", () => {
       main.querySelectorAll(".cable-choose button").forEach((x) => x.classList.toggle("selected", x === b));

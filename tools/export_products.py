@@ -12,6 +12,8 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+import accessory_images
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "products.js"
 
@@ -42,7 +44,6 @@ IMAGE_POOLS = {
         "ePad5-Mini-blackf.jpg", "ePad5-Pro-blackf.jpg", "ePad5-Pro-silverf.jpg", "ePad5-Mini-silverf.jpg")],
     ("ePad", "Tablet"): [IMG + "ePad5-Pro-silverf.jpg"],
     ("*", "Tablet"): [IMG + "Simpson-Tab-Mini-blackf.jpg", IMG + "Simpson-Tab-Max-blackf.jpg"],
-    ("*", "Accessories"): ["images/accessory.svg"],
 }
 
 SQL = ("SELECT ID__c, Product_Name__c, Brand__c, Product_Type__c, Color__c, Price__c, "
@@ -83,16 +84,23 @@ def main():
     for r in query(args.org):
         text = {k: html.unescape(v) if isinstance(v, str) else v for k, v in r.items()}
         pid = text["ID__c"]
-        products.append({
+        colors = [c.strip() for c in (text["Color__c"] or "").split(",") if c.strip()]
+        product = {
             "id": pid,
             "name": text["Product_Name__c"],
             "brand": text["Brand__c"],
             "type": text["Product_Type__c"],
-            "colors": [c.strip() for c in (text["Color__c"] or "").split(",") if c.strip()],
+            "colors": colors,
             "price": float((text["Price__c"] or "0").replace(",", "")),
             "description": text["Product_Description__c"] or "",
             "image": image_for(pid, text["Brand__c"], text["Product_Type__c"]),
-        })
+        }
+        # Accessories: generated illustration per colour, swapped by the colour picker
+        kind = accessory_images.kind_of(product["name"])
+        if product["type"] == "Accessories" and kind:
+            product["images"] = {c: accessory_images.write(ROOT, kind, c) for c in colors or ["White"]}
+            product["image"] = next(iter(product["images"].values()))
+        products.append(product)
     products.sort(key=lambda p: int(p["id"]))
 
     OUT.parent.mkdir(exist_ok=True)

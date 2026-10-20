@@ -51,7 +51,9 @@ python3 tools/export_products.py --org data360-demo
 ```
 
 Queries `Product__dlm` through `/ssot/queryv2` (sf CLI), maps images (exact visuals for flagship IDs,
-deterministic pools by brand and type otherwise, placeholder for accessories) and rewrites `data/products.js`.
+deterministic pools by brand and type otherwise) and rewrites `data/products.js`. Accessories get SVG
+illustrations drawn by `tools/accessory_images.py`, one per kind and colour (`images/accessories/`); their
+`images` map lets the product page swap the visual with the colour picker.
 
 ## Publish the sitemap
 
