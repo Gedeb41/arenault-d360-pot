@@ -121,20 +121,52 @@ try {
     };
 
 
-    window.addToCart = function() {
-        SalesforceInteractions.sendEvent({
-            interaction: {
-                name: "Add To Cart",
-                lineItem: {
-                    catalogObjectType: "Product",
-                    catalogObjectId: getProductId(),
-                    quantity: 1,
-                    price: getProductPrice(),
-                    currency: "USD"
-                }
+    /**
+     * Cart & order events
+     * The site (scripts/cart.js) dispatches DOM events; line items already use the SDK shape
+     * { catalogObjectType, catalogObjectId (Product__dlm ID__c), quantity, price, currency }
+     */
+    let sdkReady;
+    const ready = new Promise((resolve) => { sdkReady = resolve; });
+
+    const CART = (SalesforceInteractions.CartInteractionName || {});
+    const ORDER = (SalesforceInteractions.OrderInteractionName || {});
+
+    document.addEventListener("quadstar:cart", (e) => {
+        const d = e.detail;
+        ready.then(() => {
+            if (d.action === "add") {
+                SalesforceInteractions.sendEvent({
+                    interaction: { name: CART.AddToCart || "Add To Cart", lineItem: d.lineItem }
+                });
+            } else if (d.action === "remove") {
+                SalesforceInteractions.sendEvent({
+                    interaction: { name: CART.RemoveFromCart || "Remove From Cart", lineItem: d.lineItem }
+                });
+            } else if (d.action === "replace") {
+                SalesforceInteractions.sendEvent({
+                    interaction: { name: CART.ReplaceCart || "Replace Cart", lineItems: d.lineItems }
+                });
             }
         });
-    };
+    });
+
+    document.addEventListener("quadstar:purchase", (e) => {
+        const order = e.detail.order;
+        ready.then(() => {
+            SalesforceInteractions.sendEvent({
+                interaction: {
+                    name: ORDER.Purchase || "Purchase",
+                    order: {
+                        id: order.id,
+                        totalValue: order.totalValue,
+                        currency: order.currency,
+                        lineItems: order.lineItems
+                    }
+                }
+            });
+        });
+    });
 
     // ----------------------------
     // Helpers & utility functions
@@ -152,6 +184,8 @@ try {
                 .map((word, index) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
                 .join('');
         });
+        const type = new URLSearchParams(window.location.search).get("type");
+        if (type) cleanedSegments.push(type);
         return cleanedSegments.join('_').slice(0, 80);
     }
 
@@ -168,10 +202,6 @@ try {
 
     function getProductId() {
         return getProductData("productId");
-    }
-
-    function getProductPrice() {
-        return parseFloat(getProductData("productPrice")) || 0;
     }
 
     function getProductTitle() {
@@ -238,6 +268,7 @@ try {
             };
 
             SalesforceInteractions.initSitemap(config);
+            sdkReady();
         }).catch((err) => {
             console.error("SDK Initialization failed:", err);
         });
