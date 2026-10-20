@@ -121,7 +121,7 @@ try {
     };
 
 
-    window.addToCart = function(productId) {
+    window.addToCart = function() {
         SalesforceInteractions.sendEvent({
             interaction: {
                 name: "Add To Cart",
@@ -129,7 +129,7 @@ try {
                     catalogObjectType: "Product",
                     catalogObjectId: getProductId(),
                     quantity: 1,
-                    price: 148.00,
+                    price: getProductPrice(),
                     currency: "USD"
                 }
             }
@@ -160,10 +160,18 @@ try {
         return segments[0] || 'home';
     }
 
+    // Product ID__c / Price__c from Product__dlm, set on <main data-product-id data-product-price>
+    function getProductData(key) {
+        const el = document.querySelector("[data-product-id]");
+        return el ? el.dataset[key] : undefined;
+    }
+
     function getProductId() {
-        const segments = window.location.pathname.split('/').filter(Boolean);
-        const product = segments[segments.length - 1].replace('.html', '');
-        return product || 'product1';
+        return getProductData("productId");
+    }
+
+    function getProductPrice() {
+        return parseFloat(getProductData("productPrice")) || 0;
     }
 
     function getProductTitle() {
@@ -207,7 +215,7 @@ try {
                 pageTypes: [
                     {
                         name: "product",
-                        isMatch: () => /\/product/.test(window.location.href),
+                        isMatch: () => !!getProductId(),
                         interaction: {
                             name: "View Catalog Object",
                             catalogObject: {

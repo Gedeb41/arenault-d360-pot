@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/sitemap.js"></script>
     <script src="https://cdn.c360a.salesforce.com/beacon/c360a/f6964fda-718f-4f19-b0e2-63e28823802c/scripts/c360a.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <title>ePhone 14</title>
+    <title>ePhone 12</title>
 </head>
 <body>
 
@@ -61,7 +60,7 @@
         </ul>
     </nav>
 
-    <main class="container">
+    <main class="container" data-product-id="1" data-product-price="799">
 
         <!-- Left Column / Product Image -->
         <div class="left-column">
@@ -76,7 +75,7 @@
           <!-- Product Description -->
           <div class="product-description">
             <span>Phones</span>
-            <h1>ePhone 14</h1>
+            <h1>ePhone 12</h1>
             <p>Our latest ePhone 12 with all your go-to and trusted technology from every other ePhone like superfast 5G and brighter Super Retina display but NEW!</p>
           </div>
   
@@ -120,8 +119,8 @@
   
           <!-- Product Pricing -->
           <div class="product-price">
-            <span>899$</span>
-            <a href="#" onclick="addToCart(1)" class="cart-btn">Add to cart</a>
+            <span>799$</span>
+            <a href="#" onclick="addToCart(); return false;" class="cart-btn">Add to cart</a>
           </div>
         </div>
     </main>
@@ -131,18 +130,22 @@
         <h2>You Might Also Like</h2>
         <div class="product-list">
             <div class="product">
-                <img src="images/ePhone12-Mini-pink.png" alt="ePhone 14 Mini">
-                <h3>ePhone 14 Mini</h3>
-                <p>The miniature form ePhone</p>
-            </div>
-            <div class="product">
-                <img src="images/ePhone12-Pro-blackf.png" alt="ePhone 14 Pro">
-                <h3>ePhone 14 Pro</h3>
+                <a href="product2.html">
+                <img src="images/ePhone12-Pro-blackf.png" alt="ePhone 12 Pro">
+                <h3>ePhone 12 Pro</h3>
                 <p>The most powerful phone yet</p>
+                </a>
             </div>
             <div class="product">
-                <img src="images/ePad5-Mini-blackf.png" alt="ePad 5 Mini">
-                <h3>ePad 5 Mini</h3>
+                <a href="product3.html">
+                <img src="images/ePhone12-Mini-pink.png" alt="ePhone 12 Mini">
+                <h3>ePhone 12 Mini</h3>
+                <p>The miniature form ePhone</p>
+                </a>
+            </div>
+            <div class="product">
+                <img src="images/ePad5-Mini-blackf.png" alt="ePad 5 mini">
+                <h3>ePad 5 mini</h3>
                 <p>The best tiny tablet</p>
             </div>
         </div>

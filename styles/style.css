@@ -679,3 +679,7 @@ main {
         margin: 10px 0;
     }
 }
+.product a {
+    color: inherit;
+    text-decoration: none;
+}
